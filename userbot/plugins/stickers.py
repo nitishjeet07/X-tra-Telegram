@@ -29,7 +29,7 @@ from telethon.tl.types import (
 from userbot.utils import admin_cmd
 from userbot import ALIVE_NAME
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No name set yet nibba, check pinned in @XtraTgBot"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "No name set yet"
 FILLED_UP_DADDY = "Invalid pack selected."
 
 @borg.on(admin_cmd(pattern="kang ?(.*)"))
@@ -50,7 +50,7 @@ async def _(event):
         user.first_name = user.id
     pack = 1
     userid = event.from_id
-    packname = f"{user.first_name}'s @XtraTgBot Vol.{pack}"
+    packname = f"{user.first_name}'s Stickers Vol.{pack}"
     packshortname = f"vol_{pack}_with_{userid}"
     await event.edit("`Look dat way,it's a gurl!`**（　ﾟДﾟ）**\n`Meanwhile, lemme kang this stcker over hehe`**ヽ༼ ಠ益ಠ ༽ﾉ**")
 
@@ -193,7 +193,7 @@ async def _(event):
 
 
     await event.edit(f"**Kanged!** `This sticker has been stolen to` [this place](t.me/addstickers/{packshortname}), pack{pack}"
-                     f" `by` {DEFAULTUSER}\n**ᕦ(ò_óˇ)ᕤ**")
+                    )
 
 
 @borg.on(admin_cmd(pattern="packinfo"))
